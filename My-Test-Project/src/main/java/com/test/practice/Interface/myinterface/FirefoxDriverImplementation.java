@@ -16,4 +16,15 @@ public class FirefoxDriverImplementation implements MyWebdriver {
 		System.out.println("My Test");
 	}
 
+	
+	public static void main(String[] args) {
+		
+	
+	FirefoxDriverImplementation ff=new FirefoxDriverImplementation();
+	
+	ff.click();
+	ff.test();
+	ff.get(w);
+	
+	}
 }
