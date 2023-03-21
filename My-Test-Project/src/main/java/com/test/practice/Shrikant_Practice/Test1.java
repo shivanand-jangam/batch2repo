@@ -12,7 +12,6 @@ public class Test1 {
 	@FindBy(xpath="//tag[@class='lll']")
 	private static WebElement locator3;
 	
-	
 	public void clickAction(String locator)
 	{
 		driver.findElement(By.xpath(locator)).click();
@@ -42,22 +41,14 @@ public class Test1 {
 		t.clickUsingByMethod(locator2);
 		
 	}
-
-	
-	
-	
-	
 	// Without Overloading concept
 		public void clickUsingStringMethod(String locator) {
 			driver.findElement(By.xpath(locator)).click();
 		}
-
 		public void clickUsingByMethod(By locator) {
 			driver.findElement(locator).click();
 		}
-
 		public void clickUsingWebelemntMethod(WebElement locator) {
 			locator.click();
 		}
-
 }
