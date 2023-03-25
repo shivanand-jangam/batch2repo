@@ -65,7 +65,7 @@ public class MyClass {
 		System.out.println(class3.name);  */
 		
 		MyClass s1= new MyClass();
-		s1.name="Bhima";
+		s1.name="Bhima";  
 		s1.number=10;
 		System.out.println(s1.name);
 		System.out.println(s1.number);
