@@ -22,7 +22,6 @@ public class CheckBox {
 	WebElement ValidateCheckBox;
 	
 	
-	@FindBy()
 	
 	
 	
