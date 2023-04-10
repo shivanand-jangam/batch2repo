@@ -10,7 +10,13 @@ import io.cucumber.java.en.When;
 public class CommonStepDefination extends BaseTest{
 
 	CommonPage commonPage = new CommonPage();
+	BrowserFactory browser = new BrowserFactory();
+	
 
+	@Given("User navigates to the application home page")
+	public void user_navigates_to() {
+		browser.navigateToUrl();
+	}
 	@Then("User should navigate to {string} page")
 	public void user_should_navigate_to_elements_page(String menuOption) {
 		commonPage.shouldSeePageTitleAs(menuOption);
@@ -21,8 +27,4 @@ public class CommonStepDefination extends BaseTest{
 		commonPage.clickOnSubMenuOption(subMenu);
 	}
 
-	@Given("User navigates to the application home page")
-	public void user_navigates_to() {
-//		browserFactory.openBrowser("chrome");
-	}
 }

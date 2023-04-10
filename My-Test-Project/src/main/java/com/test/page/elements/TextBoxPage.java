@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
+import com.aventstack.extentreports.model.Log;
 import com.test.base.DriverManager;
 
 public class TextBoxPage {
@@ -35,8 +36,14 @@ public class TextBoxPage {
 	@FindBy(id = "name")
 	private WebElement nameText;
 
-	@FindBy(id = "email")
+	@FindBy(id = "userEmail")
 	private WebElement emailText;
+
+	@FindBy(id = "currentAddress") // locatore
+	private WebElement cAddressText;
+
+	@FindBy(id = "permanentAddress") // locator
+	private WebElement pAddressText;
 
 	public void enterUsernameAs(String username) {
 		userNameInputField.sendKeys(username);
@@ -48,12 +55,12 @@ public class TextBoxPage {
 		log.info("Entered User Email as: " + email);
 	}
 
-	public void enterCurrentAddressInputFieldAs(String cAddress) {
+	public void enterCurrentAddressAs(String cAddress) {
 		currentAddressInputField.sendKeys(cAddress);
 		log.info("Entered Current Address as: " + cAddress);
 	}
 
-	public void enterPermanentAddressInputFieldInputFieldAs(String pAddress) {
+	public void enterPermanentAddressAs(String pAddress) {
 		permanentAddressInputField.sendKeys(pAddress);
 		log.info("Entered Permanent Address as: " + pAddress);
 	}
@@ -64,14 +71,23 @@ public class TextBoxPage {
 	}
 
 	public void shouldSeeNameDisplayedAs(String name) {
-		Assert.assertEquals(nameText.getText(), name,
-				" Enter name is not matching with Expected name: " + name);
+		Assert.assertEquals(nameText.getText(), name, " Enter name is not matching with Expected name: " + name);
 		log.info("Verified Name as " + name);
 	}
 
 	public void shouldSeeEmailDisplayedAs(String email) {
-		Assert.assertEquals(emailText.getText(), email,
-				" Enter email is not matching with Expected email: " + email);
+		Assert.assertEquals(emailText.getText(), email, " Enter email is not matching with Expected email: " + email);
 		log.info("Verified email as " + email);
+	}
+
+	public void UserSeeCurrentAddressAs(String cAddress) {
+		Assert.assertEquals(cAddressText
+				.getText(),cAddress,"entered current address is not matching");
+		log.info("verify current address as " + cAddress);
+	}
+
+	public void UserSeeParmanatAdressAs(String pAddress) {
+		Assert.assertEquals(pAddressText.getText(),pAddress,"entered permanant address in not matching");
+		log.info("verify permant address as" + pAddress);
 	}
 }

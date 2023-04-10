@@ -8,6 +8,17 @@ import java.util.Set;
 
 public class Arraylist {
 
+	public static void main1(String[] args) {
+		List<String> list2 = new ArrayList<>();
+		list2.add("Shiva");
+		list2.add("Shiva");
+		list2.add(null);
+		list2.add(null);
+		list2.add(null);
+		list2.add(null);
+		System.out.println(list2);
+	}
+
 	public static void main2(String[] args) {
 		List<String> list2 = new ArrayList<>();
 		list2.add("Shiva");

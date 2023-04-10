@@ -31,6 +31,7 @@ public class BrowserFactory {
 			driver = new EdgeDriver();
 		}
 		driverManager.setDriver(driver);
+		DriverManager.getDriver().get("https://demoqa.com/");
 		DriverManager.getDriver().manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
@@ -41,6 +42,7 @@ public class BrowserFactory {
 
 	public void closeBrowser() {
 		driver.close();
-		driver.quit();
+		driver.quit();	
 	}
+	
 }
