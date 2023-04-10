@@ -34,5 +34,3 @@ Feature: Text Box feature Test cases
   Scenario: Verify Text Box functionality254434356
     When User clicks on "Elements" menu
     #And User enters Current Address as "Current Address Pune"
-    
->>>>>>> a461f098b0e52307142def0d8ddcc4596f0bcfb3:My-Test-Project/src/test/java/com/test/resouces/features/elements/TextBox.feature
