@@ -24,13 +24,13 @@ public class RegressionSuiteRunner<CucumberFeatureWrapper> {
 	@BeforeClass
 	public void beforeClass() {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-		browserFactory = new BrowserFactory();
-		browserFactory.openBrowser("chrome");
 	}
 
 	@BeforeMethod
 	public void openBrowser() {
-		
+		browserFactory = new BrowserFactory();
+		browserFactory.openBrowser("chrome");
+		browserFactory.navigateToUrl();
 	}
 
 	@AfterMethod
