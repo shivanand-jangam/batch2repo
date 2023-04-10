@@ -2,7 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Regression Chrome Suite" data-provider-thread-count="10">
 	<test name="Run Regression Chrome Suite">
-		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.test.practice.RegressionSuiteRunner" />
 		</classes>

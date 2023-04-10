@@ -145,7 +145,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- pass testng.xml files as argument from command line -->
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
