@@ -17,12 +17,8 @@ import io.cucumber.testng.TestNGCucumberRunner;
 				"html:target/cucumber-reports/cucumber-pretty",
 				"json:target/cucumber-reports/CucumberTestReport.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-<<<<<<< HEAD
-				"rerun:target/rerun.txt"}, tags = "@smooke")
-=======
-				"rerun:target/rerun.txt"}, tags = "@RegressionTest")
->>>>>>> a461f098b0e52307142def0d8ddcc4596f0bcfb3
-public class RegressionSuiteRunner<CucumberFeatureWrapper> {
+				"rerun:target/rerun.txt"}, tags = "@SmokeSuite1")
+public class SmokeSuiteRunner<CucumberFeatureWrapper> {
 	private TestNGCucumberRunner testNGCucumberRunner;
 	private BrowserFactory browserFactory;
 	@BeforeClass
@@ -34,10 +30,7 @@ public class RegressionSuiteRunner<CucumberFeatureWrapper> {
 	public void openBrowser() {
 		browserFactory = new BrowserFactory();
 		browserFactory.openBrowser("chrome");
-<<<<<<< HEAD
-=======
 		browserFactory.navigateToUrl();
->>>>>>> a461f098b0e52307142def0d8ddcc4596f0bcfb3
 	}
 
 	@AfterMethod

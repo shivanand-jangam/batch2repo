@@ -33,7 +33,7 @@ public class BrowserFactory {
 		driverManager.setDriver(driver);
 		DriverManager.getDriver().get("https://demoqa.com/");
 		DriverManager.getDriver().manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 
 	public void navigateToUrl() {
