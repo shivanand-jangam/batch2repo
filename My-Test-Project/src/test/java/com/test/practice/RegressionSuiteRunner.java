@@ -17,20 +17,19 @@ import io.cucumber.testng.TestNGCucumberRunner;
 				"html:target/cucumber-reports/cucumber-pretty",
 				"json:target/cucumber-reports/CucumberTestReport.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"rerun:target/rerun.txt"}, tags = "@SmokeSuite11")
+				"rerun:target/rerun.txt"}, tags = "@smooke")
 public class RegressionSuiteRunner<CucumberFeatureWrapper> {
 	private TestNGCucumberRunner testNGCucumberRunner;
 	private BrowserFactory browserFactory;
 	@BeforeClass
 	public void beforeClass() {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-		browserFactory = new BrowserFactory();
-		browserFactory.openBrowser("chrome");
 	}
 
 	@BeforeMethod
 	public void openBrowser() {
-		
+		browserFactory = new BrowserFactory();
+		browserFactory.openBrowser("chrome");
 	}
 
 	@AfterMethod
