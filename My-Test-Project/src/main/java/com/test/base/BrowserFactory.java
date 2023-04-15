@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import com.test.utilities.PropertiesReader;
+
 public class BrowserFactory {
 
 	private WebDriver driver;
@@ -17,8 +19,7 @@ public class BrowserFactory {
 		if (browser.equalsIgnoreCase("chrome")) {
 			driverManager = new DriverManager();
 			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir")
-							+ "\\drivers\\chromedriver.exe");
+					PropertiesReader.getProperty("webdriver.chrome.driver"));
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--enable-javascript");
 			options.addArguments("--incognito");
@@ -37,12 +38,14 @@ public class BrowserFactory {
 	}
 
 	public void navigateToUrl() {
+		// String
+		// baseUrl="https://"+getProperty("execution.environment")+".events.awana.org/";
 		DriverManager.getDriver().get("https://demoqa.com/");
 	}
 
 	public void closeBrowser() {
 		driver.close();
-		driver.quit();	
+		driver.quit();
 	}
-	
+
 }
