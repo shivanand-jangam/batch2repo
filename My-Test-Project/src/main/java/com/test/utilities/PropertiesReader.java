@@ -55,7 +55,7 @@ public class PropertiesReader {
 
 	// public static void main(String args[]) throws IOException {
 	// String
-	// baseUrl="https://"+getProperty("execution.environment")+".events.awana.org/";
+	// baseUrl="https://"+getProperty("execution.environment")+".events.org/";
 	// System.out.println("My URL : " + baseUrl);
 	// System.out.println("1: " + getProperty("webdriver.driver"));
 	// System.out.println("2: " + getProperty("execution.environment"));
