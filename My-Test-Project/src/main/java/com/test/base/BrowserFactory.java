@@ -27,8 +27,12 @@ public class BrowserFactory {
 			options.addArguments("--disable-notifications");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.firefox.driver",
+					PropertiesReader.getProperty("webdriver.firefox.driver"));
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
+			System.setProperty("webdriver.edge.driver",
+					PropertiesReader.getProperty("webdriver.edge.driver"));
 			driver = new EdgeDriver();
 		}
 		driverManager.setDriver(driver);

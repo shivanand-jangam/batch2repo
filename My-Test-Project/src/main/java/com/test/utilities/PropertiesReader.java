@@ -11,7 +11,7 @@ public class PropertiesReader {
 		FileInputStream fis = null;
 		Properties prop = null;
 		try {
-			fis = new FileInputStream("configuration.properties");
+			fis = new FileInputStream("config.properties");
 			prop = new Properties();
 			prop.load(fis);
 		} catch (FileNotFoundException fnfe) {
