@@ -8,13 +8,13 @@ import io.cucumber.java.Scenario;
 
 public class DriverManager {
 
-	private static WebDriver driver;
+	// private static WebDriver driver;
 	private static CommonUtilities commonUtilities;
-//	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	private static ThreadLocal<Scenario> scenario = new ThreadLocal<>();
 
 	public static WebDriver getDriver() {
-		WebDriver session = driver;
+		WebDriver session = driver.get();
 		if (session != null) {
 			return session;
 		}
@@ -22,7 +22,7 @@ public class DriverManager {
 	}
 
 	public void setDriver(WebDriver dr) {
-		driver = dr;
+		driver.set(dr);
 	}
 
 	public static CommonUtilities getCommonUtilities() {

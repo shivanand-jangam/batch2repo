@@ -48,8 +48,8 @@ public class BrowserFactory {
 	}
 
 	public void closeBrowser() {
-		driver.close();
-		driver.quit();
+		driverManager.getDriver().close();
+		driverManager.getDriver().quit();
 	}
 
 }

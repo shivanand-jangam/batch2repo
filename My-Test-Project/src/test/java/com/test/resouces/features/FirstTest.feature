@@ -3,7 +3,7 @@ Feature: First Practice feature file
   Background: User is Logged In
     Given User is on given step
 
-  @RegressionTest @SmokeSuite
+  @SmokeSuite
   Scenario: THIS IS TO TEST MY FIRST Scenario TESTCASE
     When User has to perform any action in when step
     And User has to perform any action in and step

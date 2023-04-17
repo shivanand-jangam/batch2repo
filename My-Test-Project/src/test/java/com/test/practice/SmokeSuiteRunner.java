@@ -44,7 +44,7 @@ public class SmokeSuiteRunner<CucumberFeatureWrapper> {
 		testNGCucumberRunner.runScenario(pickleEvent.getPickle());
 	}
 
-	@DataProvider(parallel = false)
+	@DataProvider(parallel = true)
 	public Object[][] scenarios() {
 		return testNGCucumberRunner.provideScenarios();
 	}

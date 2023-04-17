@@ -17,7 +17,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 		"\\com\\test\\stepdefination", }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 				"json:target/cucumber-reports/CucumberTestReport.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"rerun:target/rerun.txt" }, tags = "@RegressionTest")
+				"rerun:target/rerun.txt" }, tags = "@RegressionTest1")
 public class RegressionSuiteRunner<CucumberFeatureWrapper> {
 	private TestNGCucumberRunner testNGCucumberRunner;
 	private BrowserFactory browserFactory;
@@ -44,7 +44,7 @@ public class RegressionSuiteRunner<CucumberFeatureWrapper> {
 		testNGCucumberRunner.runScenario(pickleEvent.getPickle());
 	}
 
-	@DataProvider(parallel = false)
+	@DataProvider(parallel = true)
 	public Object[][] scenarios() {
 		return testNGCucumberRunner.provideScenarios();
 	}

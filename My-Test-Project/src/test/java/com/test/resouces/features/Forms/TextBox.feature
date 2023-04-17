@@ -3,7 +3,7 @@ Feature: Text Box feature Test cases
   Background: User is Logged In
     #Given User navigates to the application home page
 
-  @RegressionTest
+  @RegressionTest1
   Scenario: Verify Text Box functionality
     When User clicks on "Elementsvdsvb" menu
     #Then User should navigate to "Elements" page
@@ -30,7 +30,18 @@ Feature: Text Box feature Test cases
     #And User should see Current Address as "dvsdv"
     #And User should see Permananet Address as "zsdvsvsd"
 
-  @RegressionTest @SmokeSuite1
+  @RegressionTest1 @SmokeSuite1
   Scenario: Verify Text Box functionality254434356
+    When User clicks on "Elements" menu
+    #And User enters Current Address as "Current Address Pune"
+    
+    
+  @RegressionTest1 @SmokeSuite1
+  Scenario: Verify Text Box sdvsdvsd
+    When User clicks on "Elements" menu
+    #And User enters Current Address as "Current Address Pune"
+    
+    @RegressionTest1
+  Scenario: Verify Text Box adfvdvasdvdv
     When User clicks on "Elements" menu
     #And User enters Current Address as "Current Address Pune"
