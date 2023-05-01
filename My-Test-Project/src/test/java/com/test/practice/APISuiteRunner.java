@@ -14,7 +14,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 				"html:target/cucumber-reports/cucumber-pretty",
 				"json:target/cucumber-reports/CucumberTestReport.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"rerun:target/rerun.txt"}, tags = "@validLogin")
+				"rerun:target/rerun.txt"}, tags ="@validLogin")
 public class APISuiteRunner<CucumberFeatureWrapper> {
 	private TestNGCucumberRunner testNGCucumberRunner;
 
