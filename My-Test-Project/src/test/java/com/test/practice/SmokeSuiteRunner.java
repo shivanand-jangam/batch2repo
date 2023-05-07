@@ -18,6 +18,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 				"json:target/cucumber-reports/CucumberTestReport.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"rerun:target/rerun.txt"}, tags = "@SmokeSuite1")
+
 public class SmokeSuiteRunner<CucumberFeatureWrapper> {
 	private TestNGCucumberRunner testNGCucumberRunner;
 	private BrowserFactory browserFactory;

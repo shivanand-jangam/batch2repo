@@ -9,13 +9,15 @@ public class AddToCartStepDefination {
 
 	RestUtil restUtil = new RestUtil();
 
-	@When("User Provides Body parameters {string} and {string}")
-	public void user_provides_body_parameters(String un, String pwd) {
-
+	@When("User Provides endpoint as {string}{string}")
+	public void user_provides_endpoint_as(String string1, String string2) {
+		String endpoint = string1 + string2;
+		restUtil.feedEndpoint(endpoint);
 	}
 
-
-	@Then("Verify response contains token code")
-	public void verify_response_contains_token_code() {
+	@Then("Verify {string} product us added in the Cart")
+	public void verify_product_us_added_in_the_cart(String string) {
+		restUtil.validateBookIdAs(Integer.parseInt(string));
 	}
+
 }
